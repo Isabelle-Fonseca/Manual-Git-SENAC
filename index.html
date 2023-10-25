@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;800&family=Saira+Condensed:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>GitGuide</title>
+    <script>
+        // Função para rolar suavemente para a seção relevante
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <img src="./img/logo.png" width="120px">
+            </div><!--logo-->
+        </div><!--interface-->
+    </header>
+    <main>
+        <section class="topo-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1 class="txt-animado">GitGuide >_<br>Manual do Git</h1>
+                        <p>
+                            Bem-vindo ao "Manual do Git"! Este guia abrangente foi criado para ajudar iniciantes a
+                            aprender
+                            e dominar o Git, um sistema de controle de versão essencial para o desenvolvimento de
+                            software.
+                            Se você está iniciando sua jornada no controle de versão ou deseja aprimorar suas
+                            habilidades no
+                            Git, você está no lugar certo.
+                        </p>
+                    </div><!--txt-topo-site-->
+                    <div class="img-topo-site">
+                        <!-- <img src="/img/teste.png" alt="" width="700px"> -->
+                        <img src="./img/git-branch.png" alt="" width="520px">
+                    </div>
+                </div>
+            </div><!--interface-->
+        </section><!--topo-site-->
+
+        <section class="introducao-git interface">
+            <div class="cartao">
+                <div class="txt-introducao-git">
+                    <h2><img src="./img/icon-git.svg" alt="icon git" class="icone"> O que é o Git?</h2>
+                    <p>
+                        O Git é um sistema de controle de versão distribuído, o que significa que ele permite que várias
+                        pessoas trabalhem em um projeto de software ao mesmo tempo. Ele rastreia todas as alterações
+                        feitas nos arquivos do projeto e armazena um histórico completo de cada modificação. Isso
+                        facilita a colaboração, o rastreamento de problemas e a recuperação de versões anteriores do
+                        código.
+                    </p>
+                    <h3>Importância do Git no Desenvolvimento de Software</h3>
+                    <ul>
+                        <li>
+                            <b>colaboração Eficiente:</b> O Git permite que vários desenvolvedores trabalhem juntos em
+                            um projeto, combinando suas alterações de forma organizada.
+                        </li>
+                        <li>
+                            <b>Histórico Detalhado:</b> Cada alteração é registrada, permitindo que você veja quem fez o
+                            que e quando. Isso é valioso para solucionar problemas e entender o desenvolvimento do
+                            projeto.
+                        </li>
+                        <li>
+                            <b>Controle de Versão:</b> O Git oferece controle de versão, o que significa que você pode
+                            facilmente retornar a versões anteriores do código, caso algo dê errado.
+                        </li>
+                        <li>
+                            <b>Ramificações e Mesclagens:</b> O Git permite criar ramificações (branches) para trabalhar
+                            em novos recursos ou correções de bugs sem afetar o código principal. Posteriormente, essas
+                            ramificações podem ser mescladas (merged) de volta ao código principal.
+                        </li>
+                        <li>
+                            <b>Armazenamento em Nuvem:</b> O Git é frequentemente usado com plataformas de hospedagem na
+                            nuvem, como GitHub, GitLab e Bitbucket, tornando o código acessível e seguro.
+                        </li>
+                    </ul>
+                </div><!--txt-introducao-git-->
+            </div><!--cartao-->
+        </section><!--introducao-git-->
+
+        <section class="instalacao-git">
+            <div class="box">
+                <div class="flex">
+                    <div class="txt-instalacao-git">
+                        <h2>Instalando<br>o Git</h2>
+
+                    </div>
+                    <div class="links-instalacao">
+                        <a href="https://git-scm.com/download/mac" target="_blank">Instale o Git para MacOS</a><br>
+                        <a href="https://git-scm.com/download/win" target="_blank">Instale o Git para Windows</a><br>
+                        <a href="https://git-scm.com/download/linux" target="_blank">Instale o Git para Linux</a>
+
+                    </div>
+
+                </div><!--flex-->
+            </div><!--box-->
+        </section><!--instalacao-git-->
+
+        <section class="configuracao-inicial interface">
+            <div class="container">
+                <div class="txt-conf-inicial">
+                    <h2>Introdução à Configuração Inicial</h2>
+                    <p>
+                        Configurar seu nome de usuário e endereço de email no Git é o primeiro passo para começar a usar
+                        esta poderosa ferramenta de controle de versão. É importante, pois isso permite que o Git
+                        associe suas contribuições aos seus detalhes pessoais, tornando-o um colaborador identificável
+                        em projetos de código aberto e em equipes de desenvolvimento.
+                    </p>
+                </div>
+                <div class="cards-column">
+                    <div class="card">
+                        <h3>Configurando Nome de Usuário</h3>
+                        <p>Vamos começar a configurar seu nome de usuário no Git. Isso garantirá que suas contribuições
+                            aos repositórios sejam atribuídas a você. Para definir seu nome de usuário, use o seguinte
+                            comando:</p>
+                        <code>git config user.name "Seu Nome"</code>
+                    </div>
+                    <div class="card">
+                        <h3>Configurando endereço de e-mail</h3>
+                        <p>O próximo passo é configurar seu endereço de email, que também é essencial para identificar
+                            você como o autor das alterações. Use o comando a seguir para definir seu endereço de email:
+                        </p>
+                        <code>git config user.email "seu@email.com</code>
+                    </div>
+                    <div class="card">
+                        <h3>Verificação de Configuração</h3>
+                        <p>Após configurar seu nome de usuário e endereço de e-mail, é importante verificar se as
+                            configurações foram aplicadas corretamente. Use o comando abaixo para listar suas
+                            configurações atuais:</p>
+                        <code> git config --list </code>
+                    </div>
+                </div><!--cards-column-->
+            </div><!--container-->
+        </section><!--configuracao-inicial-->
+
+        <section class="trabalhando-repositorios interface">
+            <div class="conteudo-txt flex">
+                <div class="txt-criando-rep">
+                    <h2>Trabalhando com repositórios</h2>
+                    <p>Repositórios são fundamentais no Git. Eles são onde o código-fonte e as alterações são
+                        armazenados. Aprenda a criar repositórios do zero e a clonar repositórios existentes.</p>
+                    <h3>Criando Repositório</h3>
+                    <ol>
+                        <li><b>Inicialize um Novo Repositório: </b>Use <code>git init</code>para criar um novo
+                            repositório Git.</li>
+                        <li><b>Adicione Arquivos: </b>Use <code>git add</code> para incluir os arquivos no controle de
+                            versão.</li>
+                        <li><b>Faça um Commit: </b>Grave um commit inicial com uma mensagem descritiva com
+                            <code>git commit -m "mensagem descritiva"</code>
+                        </li>
+                    </ol>
+                    <h3>Clonando um Repositório</h3>
+                    <p><b>Clonando um repositório existente: </b> Use <code>git clone [URL] </code>para criar uma cópia
+                        local de um projeto</p>
+                </div><!--txt-criando-rep-->
+                <div class="gerenciamento-rep">
+                    <h3>Gerenciamento de Repositórios Remotos:</h3>
+                    <p><b>Adicionar um repositório remoto (origin):</b> Use <code>git remote add origin [URL]</code></p>
+                    <p><b>Renomear um repositório remoto:</b> Use <code>git remote rename origin novo-nome</code></p>
+                    <p><b>Remover um Repositório Remoto:</b> Use <code>git remote rm origin</code></p>
+                    <p><b>Gerar um resumo de commits:</b> Use <code>git shortlog</code></p>
+                    <img src="./img/rep-remoto.png" alt="">
+                </div><!--gerenciamento-rep-->
+            </div>
+        </section><!--trabalhando-repositorios-->
+
+        <section class="gerenciamento-arq interface">
+            <div class="intro">
+                <div class="txt-gerenciamento-arq">
+                    <h2>Gerenciamento de Arquivos</h2>
+                    <p>O Gerenciamento de Arquivos é uma parte fundamental do uso do Git. Envolve a adição, confirmação
+                        e rastreamento de arquivos em um repositório Git. Compreender esse processo é crucial para o
+                        desenvolvimento colaborativo de software e a criação de um histórico de alterações consistente.
+                    </p>
+                </div><!--txt-gerenciamento-arq-->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tópico</th>
+                                <th>Descrição</th>
+                                <th>Comandos Git</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adicionar Arquivos</td>
+                                <td>Adiciona arquivos ao repositório</td>
+                                <td><code>git add 'nome arquivo'</code></td>
+                            </tr>
+                            <tr>
+                                <td>Fazer um Commit</td>
+                                <td>Confirma as alterações em um commit</td>
+                                <td><code>git commit -m "Mensagem descritiva"</code></td>
+                            </tr>
+                            <tr>
+                                <td>Histórico de Commits</td>
+                                <td>Mantem um registro de todos os commits </td>
+                                <td><code>git log</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!--intro-->
+        </section><!--gerenciamento-arq-->
+
+        <section class="trabalhando-branches interface">
+            <div class="container-branch">
+                <h2>BRANCHES</h2>
+                <div class="h3-group">
+                  <h3><code>git branch</code></h3>
+                  <p>Liste todos os ramos (branches) disponíveis no repositório.</p>
+                </div>
+                <div class="h3-group">
+                  <h3><code>git checkout [branch]</code></h3>
+                  <p>Mude para um ramo específico.</p>
+                </div>
+                <div class="h3-group">
+                  <h3><code>git merge [branch]</code></h3>
+                  <p>Mesclar alterações de um ramo em outro.</p>
+                </div>
+                <div class="h3-group">
+                  <h3><code>git push origin [branch]</code></h3>
+                  <p>Envie um ramo local para o repositório remoto.</p>
+                </div>
+            </div>
+
+
+
+        </section><!--trabalhando-branches-->
+
+        <section class="resolucao-conflitos interface">
+            <div class="container-conflitos flex">
+                <div class="intro-conflitos">
+                    <h2> Resolução de Conflitos</h2>
+                    <p>Conflitos podem ocorrer ao mesclar alterações de ramos diferentes. Neste tópico, você aprenderá a identificar, resolver e evitar conflitos de mesclagem, garantindo um fluxo de trabalho suave e colaboração eficiente.</p>
+                    <img src="./img/img-conflitos.png" alt="">
+                </div>
+                
+                <div class="txt-resol-conflitos">
+                    <h3>Resolvendo conflitos:</h3>
+                    <ol class="lista-conflitos">
+                        <li>Após a detecção de conflitos, você precisará abrir os arquivos em um editor de código e resolver manualmente as áreas conflituosas. As áreas em conflito serão claramente marcadas com marcadores especiais, indicando as alterações do seu ramo e as alterações do outro ramo.</li>
+                        <li>Você deve editar o código para que ele faça sentido após a mesclagem. Isso envolve escolher quais alterações manter, quais descartar e como as alterações devem ser organizadas.</li>
+                        <li>Após resolver os conflitos, você deve adicionar os arquivos alterados ao índice com <code>git add.</code></li>
+                    </ol>
+                    <h3>Comando do git</h3>
+                    <p><code>git merge [branch]</code>  Inicia a resolução de conflitos quando ocorrerem conflitos de mesclagem.
+                    </p>
+                </div>
+            </div>
+        </section><!--resolucao-conflitos-->
+
+        <section class="personalizacao-b-pratica interface">
+            <div class="container-b-pratica">
+                <div class="txt-b-pratica">
+                    <h2>Personalização e Boas Práticas (Ignorando Arquivos)</h2>
+                    <p>Personalizar o Git para atender às suas necessidades e aplicar boas práticas é crucial. Além disso, aprender a ignorar arquivos indesejados é importante para manter seu repositório limpo. Neste tópico, você encontrará dicas sobre personalização e criação de arquivos .gitignore</p>
+                </div>
+                <div class="box-cards">
+                    <div class="box-card">
+                        <h3><code>.gitignore</code></h3>
+                        <p> Cria um arquivo .gitignore para especificar quais arquivos ou diretórios devem ser ignorados pelo Git.</p>
+                    </div>
+                    <div class="box-card">
+                        <h3><code>git commit -am "Mensagem"</code></h3>
+                        <p> Adiciona automaticamente todos os arquivos modificados e faz um commit com uma mensagem</p>
+                    </div>
+                    <div class="box-card">
+                        <h3><code>git reset HEAD~1</code></h3>
+                        <p>Desfaz o último commit, mantendo as alterações nos arquivos na área de preparação (staging).</p>
+                    </div>
+                    <div class="box-card">
+                        <h3><code> git reset HEAD~1 --soft </code></h3>
+                        <p>Desfaz o último commit e mantem as alterações nos arquivos no diretório de trabalho.</p>
+                    </div>
+                </div><!--box-cards-->
+            </div><!--container-b-pratica-->
+        </section><!--personaizacao-b-pratica-->
+
+        <section class="historico-commits interface">
+            <div class="container-h-commits flex">
+                <div class="txt-h-commits">
+                    <h2>Histórico de Commits</h2>
+                    <p>O histórico de commits é uma ferramenta valiosa para entender o progresso de um projeto. Neste tópico, você aprenderá como visualizar o histórico de commits e filtrá-lo de acordo com suas necessidades.</p>
+                </div>
+                <div class="box-cards-c">
+                    <h3>Comandos do Git</h3>
+                    <div class="card-c">
+                        <div class="txt-comandos">
+                            <code>git log --oneline</code>
+                        </div>
+                        <div class="conteudo-card">
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-c">
+                        <div class="txt-comandos">
+                            <code>git log --author 'nome do autor'</code>
+                        </div>
+                    </div>
+                    <div class="card-c">
+                        <div class="txt-comandos">
+                            <code>git log --grep 'inicial'</code>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!--historico-commits-->
+
+        <section class="perguntas-freq-ref">
+
+        </section><!--perguntas-freq-ref-->
+    </main>
+
+</body>
+
+</html>
