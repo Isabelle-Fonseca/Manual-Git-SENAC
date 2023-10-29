@@ -13,21 +13,36 @@
         href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;800&family=Saira+Condensed:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <title>GitGuide</title>
-    <script>
-        // Função para rolar suavemente para a seção relevante
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </head>
 
 <body>
+
     <header>
         <div class="interface">
             <div class="logo">
-                <img src="./img/logo.png" width="120px">
+                <h1>GitGuide</h1>
             </div><!--logo-->
         </div><!--interface-->
+        <input type="checkbox" class="menu-faketrigger" id="menu-checkbox">
+        <label for="menu-checkbox" class="menu-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu interface">
+            <ul class="menu-list">
+                <li><a href="#introducao-git">Introdução ao Git</a></li>
+                <li><a href="#instalacao-git"> Intalação do Git</a></li>
+                <li><a href="#configuracao-inicial">Configuração Inicial</a></li>
+                <li><a href="#trabalhando-repositorios">Trabalhando com Repositórios</a></li>
+                <li><a href="#gerenciamento-arq">Gerenciamento de Arquivos</a></li>
+                <li><a href="#trabalhando-branches">Branches</a></li>
+                <li><a href="#resolucao-conflitos">Resolução de Conflitos</a></li>
+                <li><a href="#personalizacao-b-pratica">Personalização e Boa Prática</a></li>
+                <li><a href="#historico-commits">Histórico de Commits</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="topo-site">
@@ -47,16 +62,16 @@
                     </div><!--txt-topo-site-->
                     <div class="img-topo-site">
                         <!-- <img src="/img/teste.png" alt="" width="700px"> -->
-                        <img src="./img/git-branch.png" alt="" width="520px">
+                        <img src="img/git-branch.png" alt="" width="520px">
                     </div>
                 </div>
             </div><!--interface-->
         </section><!--topo-site-->
 
-        <section class="introducao-git interface">
+        <section id="introducao-git" class="interface">
             <div class="cartao">
                 <div class="txt-introducao-git">
-                    <h2><img src="./img/icon-git.svg" alt="icon git" class="icone"> O que é o Git?</h2>
+                    <h2><img src="./img/git-svgTeste.svg" alt="icon git" class="icon-git"> O que é o Git?</h2>
                     <p>
                         O Git é um sistema de controle de versão distribuído, o que significa que ele permite que várias
                         pessoas trabalhem em um projeto de software ao mesmo tempo. Ele rastreia todas as alterações
@@ -93,7 +108,7 @@
             </div><!--cartao-->
         </section><!--introducao-git-->
 
-        <section class="instalacao-git">
+        <section id="instalacao-git">
             <div class="box">
                 <div class="flex">
                     <div class="txt-instalacao-git">
@@ -111,7 +126,7 @@
             </div><!--box-->
         </section><!--instalacao-git-->
 
-        <section class="configuracao-inicial interface">
+        <section id="configuracao-inicial" class="interface">
             <div class="container">
                 <div class="txt-conf-inicial">
                     <h2>Introdução à Configuração Inicial</h2>
@@ -148,7 +163,7 @@
             </div><!--container-->
         </section><!--configuracao-inicial-->
 
-        <section class="trabalhando-repositorios interface">
+        <section id="trabalhando-repositorios" class="interface">
             <div class="conteudo-txt flex">
                 <div class="txt-criando-rep">
                     <h2>Trabalhando com repositórios</h2>
@@ -156,7 +171,7 @@
                         armazenados. Aprenda a criar repositórios do zero e a clonar repositórios existentes.</p>
                     <h3>Criando Repositório</h3>
                     <ol>
-                        <li><b>Inicialize um Novo Repositório: </b>Use <code>git init</code>para criar um novo
+                        <li><b>Inicialize um Novo Repositório: </b>Use <code>git init</code> para criar um novo
                             repositório Git.</li>
                         <li><b>Adicione Arquivos: </b>Use <code>git add</code> para incluir os arquivos no controle de
                             versão.</li>
@@ -179,7 +194,7 @@
             </div>
         </section><!--trabalhando-repositorios-->
 
-        <section class="gerenciamento-arq interface">
+        <section id="gerenciamento-arq" class="interface">
             <div class="intro">
                 <div class="txt-gerenciamento-arq">
                     <h2>Gerenciamento de Arquivos</h2>
@@ -219,24 +234,24 @@
             </div><!--intro-->
         </section><!--gerenciamento-arq-->
 
-        <section class="trabalhando-branches interface">
+        <section id="trabalhando-branches" class="interface">
             <div class="container-branch">
                 <h2>BRANCHES</h2>
                 <div class="h3-group">
-                  <h3><code>git branch</code></h3>
-                  <p>Liste todos os ramos (branches) disponíveis no repositório.</p>
+                    <h3><code>git branch</code></h3>
+                    <p>Liste todos os ramos (branches) disponíveis no repositório.</p>
                 </div>
                 <div class="h3-group">
-                  <h3><code>git checkout [branch]</code></h3>
-                  <p>Mude para um ramo específico.</p>
+                    <h3><code>git checkout [branch]</code></h3>
+                    <p>Mude para um ramo específico.</p>
                 </div>
                 <div class="h3-group">
-                  <h3><code>git merge [branch]</code></h3>
-                  <p>Mesclar alterações de um ramo em outro.</p>
+                    <h3><code>git merge [branch]</code></h3>
+                    <p>Mesclar alterações de um ramo em outro.</p>
                 </div>
                 <div class="h3-group">
-                  <h3><code>git push origin [branch]</code></h3>
-                  <p>Envie um ramo local para o repositório remoto.</p>
+                    <h3><code>git push origin [branch]</code></h3>
+                    <p>Envie um ramo local para o repositório remoto.</p>
                 </div>
             </div>
 
@@ -244,38 +259,49 @@
 
         </section><!--trabalhando-branches-->
 
-        <section class="resolucao-conflitos interface">
+        <section id="resolucao-conflitos" class="interface">
             <div class="container-conflitos flex">
                 <div class="intro-conflitos">
                     <h2> Resolução de Conflitos</h2>
-                    <p>Conflitos podem ocorrer ao mesclar alterações de ramos diferentes. Neste tópico, você aprenderá a identificar, resolver e evitar conflitos de mesclagem, garantindo um fluxo de trabalho suave e colaboração eficiente.</p>
+                    <p>Conflitos podem ocorrer ao mesclar alterações de ramos diferentes. Neste tópico, você aprenderá a
+                        identificar, resolver e evitar conflitos de mesclagem, garantindo um fluxo de trabalho suave e
+                        colaboração eficiente.</p>
                     <img src="./img/img-conflitos.png" alt="">
                 </div>
-                
+
                 <div class="txt-resol-conflitos">
                     <h3>Resolvendo conflitos:</h3>
                     <ol class="lista-conflitos">
-                        <li>Após a detecção de conflitos, você precisará abrir os arquivos em um editor de código e resolver manualmente as áreas conflituosas. As áreas em conflito serão claramente marcadas com marcadores especiais, indicando as alterações do seu ramo e as alterações do outro ramo.</li>
-                        <li>Você deve editar o código para que ele faça sentido após a mesclagem. Isso envolve escolher quais alterações manter, quais descartar e como as alterações devem ser organizadas.</li>
-                        <li>Após resolver os conflitos, você deve adicionar os arquivos alterados ao índice com <code>git add.</code></li>
+                        <li>Após a detecção de conflitos, você precisará abrir os arquivos em um editor de código e
+                            resolver manualmente as áreas conflituosas. As áreas em conflito serão claramente marcadas
+                            com marcadores especiais, indicando as alterações do seu ramo e as alterações do outro ramo.
+                        </li>
+                        <li>Você deve editar o código para que ele faça sentido após a mesclagem. Isso envolve escolher
+                            quais alterações manter, quais descartar e como as alterações devem ser organizadas.</li>
+                        <li>Após resolver os conflitos, você deve adicionar os arquivos alterados ao índice com
+                            <code>git add.</code></li>
                     </ol>
                     <h3>Comando do git</h3>
-                    <p><code>git merge [branch]</code>  Inicia a resolução de conflitos quando ocorrerem conflitos de mesclagem.
+                    <p><code>git merge [branch]</code> Inicia a resolução de conflitos quando ocorrerem conflitos de
+                        mesclagem.
                     </p>
                 </div>
             </div>
         </section><!--resolucao-conflitos-->
 
-        <section class="personalizacao-b-pratica interface">
+        <section id="personalizacao-b-pratica" class="interface">
             <div class="container-b-pratica">
                 <div class="txt-b-pratica">
                     <h2>Personalização e Boas Práticas (Ignorando Arquivos)</h2>
-                    <p>Personalizar o Git para atender às suas necessidades e aplicar boas práticas é crucial. Além disso, aprender a ignorar arquivos indesejados é importante para manter seu repositório limpo. Neste tópico, você encontrará dicas sobre personalização e criação de arquivos .gitignore</p>
+                    <p>Personalizar o Git para atender às suas necessidades e aplicar boas práticas é crucial. Além
+                        disso, aprender a ignorar arquivos indesejados é importante para manter seu repositório limpo.
+                        Neste tópico, você encontrará dicas sobre personalização e criação de arquivos .gitignore</p>
                 </div>
                 <div class="box-cards">
                     <div class="box-card">
                         <h3><code>.gitignore</code></h3>
-                        <p> Cria um arquivo .gitignore para especificar quais arquivos ou diretórios devem ser ignorados pelo Git.</p>
+                        <p> Cria um arquivo .gitignore para especificar quais arquivos ou diretórios devem ser ignorados
+                            pelo Git.</p>
                     </div>
                     <div class="box-card">
                         <h3><code>git commit -am "Mensagem"</code></h3>
@@ -283,7 +309,8 @@
                     </div>
                     <div class="box-card">
                         <h3><code>git reset HEAD~1</code></h3>
-                        <p>Desfaz o último commit, mantendo as alterações nos arquivos na área de preparação (staging).</p>
+                        <p>Desfaz o último commit, mantendo as alterações nos arquivos na área de preparação (staging).
+                        </p>
                     </div>
                     <div class="box-card">
                         <h3><code> git reset HEAD~1 --soft </code></h3>
@@ -293,43 +320,95 @@
             </div><!--container-b-pratica-->
         </section><!--personaizacao-b-pratica-->
 
-        <section class="historico-commits interface">
-            <div class="container-h-commits flex">
-                <div class="txt-h-commits">
+        <section id="historico-commits" class="interface">
+            <div class="container-h-commits">
+                <div class="txt-h-commits flex">
                     <h2>Histórico de Commits</h2>
-                    <p>O histórico de commits é uma ferramenta valiosa para entender o progresso de um projeto. Neste tópico, você aprenderá como visualizar o histórico de commits e filtrá-lo de acordo com suas necessidades.</p>
+                    <p>O histórico de commits é uma ferramenta valiosa para entender o progresso de um projeto. Neste
+                        tópico, você aprenderá como visualizar o histórico de commits e filtrá-lo de acordo com suas
+                        necessidades.</p>
                 </div>
-                <div class="box-cards-c">
-                    <h3>Comandos do Git</h3>
+
+                <div class="box-cards-c flex">
                     <div class="card-c">
-                        <div class="txt-comandos">
-                            <code>git log --oneline</code>
+                        <div class="icon">
+                            <img src="img/historical.svg">
                         </div>
                         <div class="conteudo-card">
-                            <p>
-
+                            <code>git log --oneline</code>
+                            <p>Exibe de forma resumida o histórico de commits de um repositório Git em uma unica linha.
                             </p>
                         </div>
                     </div>
                     <div class="card-c">
-                        <div class="txt-comandos">
-                            <code>git log --author 'nome do autor'</code>
+                        <div class="icon">
+                            <img src="img/writer.svg">
+                        </div>
+                        <div class="conteudo-card">
+                            <code>git log --author 'nome'</code>
+                            <p>É usado para filtrar o histórico de commits com base no autor dos commits.
+                            </p>
                         </div>
                     </div>
                     <div class="card-c">
-                        <div class="txt-comandos">
+                        <div class="icon">
+                            <img src="img/search.svg">
+                        </div>
+                        <div class="conteudo-card">
                             <code>git log --grep 'inicial'</code>
+                            <p>Ele exibe apenas os commits cujas mensagens contenham o texto especificado.</p>
                         </div>
                     </div>
-                </div>
-
-            </div>
+                </div><!--box-cards-c flex-->
+            </div><!--container-h-commits-->
         </section><!--historico-commits-->
 
-        <section class="perguntas-freq-ref">
-
+        <section id="FAQ" class="interface">
+            <div class="container-faq flex">
+                <h2>FAQ</h2>
+                <div class="content-faq">
+                    <details>
+                        <summary>Qual é a diferença entre Git e GitHub?
+                        </summary>
+                        <P> O Git é o sistema de controle de versão em si, e o GitHub é um serviço que permite hospedar
+                            repositórios Git na nuvem, facilitando a colaboração e o compartilhamento de código.
+                        </P>
+                    </details>
+                    <details>
+                        <summary>O que são branches no Git?</summary>
+                        <p>Branches são linhas de desenvolvimento separadas em um repositório Git. Eles permitem que
+                            você trabalhe em diferentes recursos ou correções de bugs sem interferir no código
+                            principal. As branches podem ser criadas, mescladas e excluídas para gerenciar melhor o
+                            desenvolvimento de software.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Como resolvo conflitos de mesclagem no Git?</summary>
+                        <p>Para resolvê-los, você deve editar manualmente os arquivos em conflito, marcando as partes
+                            que deseja manter e removendo as partes indesejadas. Após a resolução, você pode fazer o
+                            commit das alterações.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Qual é a diferença entre git pull e git fetch?</summary>
+                        <p>O comando git pull obtém as alterações do repositório remoto e as mescla automaticamente com
+                            a sua branch atual. Já o comando git fetch obtém as alterações do repositório remoto, mas
+                            não as mescla automaticamente. Isso permite que você revise as alterações antes de fazer a
+                            mesclagem.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>O Git é apenas para programadores?</summary>
+                        <p>Embora o Git seja amplamente utilizado no desenvolvimento de software, ele não se limita
+                            apenas a programadores. Qualquer pessoa que deseje rastrear alterações em arquivos,
+                            colaborar em projetos ou manter um histórico de versões pode se beneficiar do uso do Git.
+                        </p>
+                    </details>
+                </div>
+            </div><!--container-faq-->
         </section><!--perguntas-freq-ref-->
     </main>
+    <footer></footer>
 
 </body>
 
